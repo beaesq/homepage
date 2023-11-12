@@ -6,6 +6,16 @@
   --detail-color: #923A56;
   --text-color-dark: #000000;
   --text-color-light: #ffffff;
+  --shadow-color: #9b8989;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+
+a:hover, a:active {
+  color: var(--detail-color);
 }
 
 /* ==========
@@ -33,15 +43,20 @@ body {
   background-color: var(--background-color);
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bg-decor {
   position: absolute;
   width: 100%;
-  height: clamp(550px, 50vh, 650px);
+  max-width: 1920px;
+  height: clamp(650px, 50vh, 750px);
   background-color: var(--detail-color);
-  transform: skewY(-13deg);
-  top: -200px;
-  box-shadow: -3px 1px 4px #363636;
+  transform: skewY(-12deg);
+  top: -250px;
+  box-shadow: -3px 1px 4px var(--shadow-color);
   z-index: -1;
 }
