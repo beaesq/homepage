@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Work+Sans&display=swap');
+
+* {
+  font-family: 'Bitter', serif;
+}
+
+div, span, h1, h2, h3, p, ul, li, img, a, i {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ul {
+  list-style: none;
+}
