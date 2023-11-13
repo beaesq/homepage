@@ -70,63 +70,65 @@ body {
 ========== */
 
 .top {
-  /* display: grid;
-  grid-template-columns: clamp(250px, 30%, 300px) auto; */
+  display: inline-block;
   margin: 40px 10vw;
 }
 
 h1 {
-  /* grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  position: relative;
+  bottom: -540px;
   z-index: 1;
-  justify-self: end;
-  align-self: end; */
+
   font-family: 'Work Sans', sans-serif;
   font-size: 50px;
   color: var(--text-color-light);
   text-shadow: 1px 1px 3px var(--shadow-color);
 }
 
-.top picture {
-  /* grid-column: 1 / 2;
-  grid-row: 1 / 2; */
-}
-
-.top img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-}
-
 .about {
-  /* margin: 40px 0px; */
+  display: inline-block;
+  max-height: 540px;
   background-color: var(--background-color);
   box-shadow: 1px 1px 8px var(--shadow-color);
-  /* padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 }
 
 .about>h2 {
   font-family: 'Work Sans', sans-serif;
   font-size: 32px;
+  margin: 60px 40px 20px 40px;
 }
 
 .about>p {
+  text-align: justify;
+  font-size: 20px;
+  margin: 60px 40px;
   line-height: 1.5em;
 }
 
 .about>ul {
-  margin-top: 15px;
-  align-self: end;
+  margin: 20px 40px;
+  justify-content: end;
+  align-self: center;
   display: grid;
   grid-auto-flow: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .about i {
   font-size: 32px;
+}
+
+.top picture {
+  float: left;
+  position: relative;
+  top: -30px;
+  left: -30px;
+}
+
+.top img {
+  width: clamp(200px, 40vw, 400px);
+  object-fit: cover;
+  height: auto;
 }
 
 /* ==========
@@ -271,13 +273,42 @@ footer>img {
 
 @media screen and (max-width: 599px) {
   .top {
-    grid-template-columns: auto;
+    margin: 40px 5vw;
   }
 
   .about {
     border: none;
     box-shadow: none;
-    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: auto;
+    max-height: none;
+  }
+
+  h1 {
+    bottom: 0px;
+  }
+
+  .about>h2 {
+    margin: 40px 5vw;  
+  }
+
+  .about>p {
+    margin: 20px 5vw;
+  }
+
+  .about>ul {
+    margin: 20px 5vw;
+  }
+
+  .top picture {
+    top: 0;
+    left: 0;
+    float: none;
+    position: static;
+  }
+
+  .top img {
+    width: 100%;
   }
 
   footer {
@@ -294,7 +325,6 @@ footer>img {
 @media screen and (min-width: 600px) and (max-width: 1199px) {
   .top {
     display: inline-block;
-    
   }
 
   h1 {
@@ -302,6 +332,7 @@ footer>img {
     text-align: end;
     margin-right: 40px;
     z-index: 1;
+    bottom: 0;
   }
 
   .about {
