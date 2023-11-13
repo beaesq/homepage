@@ -9,6 +9,10 @@
   --shadow-color: #9b8989;
 }
 
+body {
+  color: var(--text-color-dark);
+}
+
 a {
   text-decoration: none;
   color: var(--text-color-dark);
@@ -192,4 +196,86 @@ h1 {
 .card>p {
   grid-area: description;
   margin: 15px;
+}
+
+/* ==========
+   FOOTER
+========== */
+
+footer {
+  background-color: var(--detail-color);
+  width: 100%;
+}
+
+.contact {
+  color: var(--text-color-light);
+  padding: 40px 10vw;
+  
+  display: grid;
+  grid-template-columns: 1fr clamp(300px, 40vw, 500px);  
+  column-gap: 40px;
+  row-gap: 15px;
+  align-items: center;
+  grid-template-areas: 
+  "header picture"
+  "call picture"
+  "address picture"
+  "contact picture"
+  "links picture";
+}
+
+.contact>h2 {
+  grid-area: header;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 32px;
+}
+
+.contact>p.call {
+  grid-area: call;
+}
+
+.contact>p.address {
+  grid-area: address;
+}
+
+.contact>ul.contact-info {
+  grid-area: contact;
+  display: grid;
+  row-gap: 5px;
+}
+
+.contact>ul.contact-info li {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 5px;
+  grid-template-columns: min-content auto;
+  align-items: center;
+}
+
+.contact>ul.contact-info svg {
+  width: 30px;
+  height: auto;
+}
+
+.contact>ul.links {
+  grid-area: links;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 20px;
+}
+
+.contact>ul.links i {
+  font-size: 30px;
+  color: var(--text-color-light);
+}
+
+.contact>ul.links i:hover, .contact>ul.links i:active {
+  color: var(--text-color-dark);
+}
+
+.contact>img {
+  grid-area: picture;
+  width: 100%;
+  height: auto;
 }
