@@ -2,12 +2,13 @@
 <main>
   <div class="top">
     <h1>Kim Jiwoo</h1>
-    <picture>
-      <source media="(max-width: 599px)" srcset="./images/portrait-480.jpg"/>
-      <source media="(min-width: 600px)" srcset="./images/portrait-800.jpg"/>
-      <img src="./images/portrait-800.jpg" alt="Kim Jiwoo" />
-    </picture> 
     <div class="about">
+      <picture>
+        <source media="(max-width: 599px)" srcset="./images/portrait-480.jpg"/>
+        <source media="(min-width: 600px) and (max-width: 1199px)" srcset="./images/square-480.jpg" />
+        <source media="(min-width: 1200px)" srcset="./images/portrait-800.jpg"/>
+        <img src="./images/portrait-800.jpg" alt="Kim Jiwoo" />
+      </picture> 
       <h2>About me</h2>
       <p>Making sure that fluff gets into the owner's eyes thinking longingly about tuna brine. A nice warm laptop for me to sit on shake treat bag lick butt and make a weird face cats woo. Cough furball human clearly uses close to one life a night no one naps that long so i revive by standing on chest</p>
       <ul class="links">
@@ -109,10 +110,10 @@
         <a href=""><i class="devicon-twitter-original"></i></a>
       </li>
     </ul>
-    <img 
-      srcset="./images/landscape-480.jpg 480w, ./images/landscape-800.jpg 800w" 
-      sizes="(max-width: 599px) 480px, 800px" 
-      src="./images/landscape-800.jpg" 
-      alt="Kim Jiwoo" />
   </div>
+  <img 
+    srcset="./images/landscape-480.jpg 480w, ./images/landscape-800.jpg 800w" 
+    sizes="(max-width: 599px) 480px, 800px" 
+    src="./images/landscape-800.jpg" 
+    alt="Kim Jiwoo" />
 </footer>
