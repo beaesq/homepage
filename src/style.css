@@ -68,8 +68,7 @@ body {
 .top {
   display: grid;
   grid-template-columns: clamp(250px, 30%, 300px) auto;
-  max-width: 1000px;
-  margin: 20px 0px;
+  margin: 40px 10vw;
 }
 
 h1 {
@@ -123,4 +122,74 @@ h1 {
 
 .about i {
   font-size: 32px;
+}
+
+/* ==========
+  PROJECTS
+========== */
+
+.projects {
+  margin: 100px 5vw;
+}
+
+.projects>h2 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 32px;
+  margin: 10px 0px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+  grid-template-columns: auto min-content;
+  grid-template-areas:
+  "image image"
+  "title links"
+  "description description";
+  row-gap: 15px;
+  box-shadow: 1px 1px 4px var(--shadow-color);
+}
+
+.card>img {
+  grid-area: image;
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.card>h3 {
+  grid-area: title;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.card>ul {
+  grid-area: links;
+  align-self: end;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5px;
+  margin-right: 15px;
+}
+
+.card>ul i {
+  font-size: 28px;
+}
+
+.card>ul svg {
+  width: 30px;
+  height: auto;
+}
+
+.card>p {
+  grid-area: description;
+  margin: 15px;
 }
